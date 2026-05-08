@@ -2,66 +2,85 @@
 
 ---
 
-# 🎯 Learning Objectives
+## Learning Outcomes Assessed
 
-In this module, you will learn how Java programs make decisions based on different conditions.
-
-By the end of this module, you should be able to:
-
-* Understand decision-making in programming
-* Use `if`, `else if`, and `else` statements correctly
-* Apply comparison operators like `>`, `<`, `>=`, `<=`, `==`, and `!=`
-* Solve practical real-world logic problems
-* Handle edge cases carefully
-* Return precise formatted outputs
+* Decision Making
+* Conditional Logic
+* Comparison Operators
+* String Formatting
+* Boundary Testing
+* Problem Solving
 
 ---
 
-# 🎥 Video Resource
+## Module Structure
 
-https://youtu.be/xTtL8E4LzTQ
+This module contains:
 
-### ⏱ Focus Sections:
+### Coding Practice:
 
-* `00:01:09 → 00:01:22`
-* `00:01:27 → 00:01:56`
+All questions must be completed inside:
 
-### Recommended Study Method:
+```java
+ConditionExercises.java
+```
 
-### 👉 Watch → Pause → Code → Test → Repeat
+Your task is to:
 
-Do not binge-watch.
-Practical repetition builds mastery.
+* Read each function carefully
+* Understand what the function is asking
+* Apply correct conditional logic
+* Follow exact return formats
+* Pass all tests successfully
 
 ---
 
-# 🧠 Core Concepts
+## Your Goal
+
+For each function:
+
+* Use valid Java syntax
+* Apply `if`, `else if`, and `else` correctly
+* Handle all edge cases
+* Return exact required outputs
+* Follow formatting instructions precisely
+* Ensure all unit tests pass
 
 ---
 
-## 🔹 Basic `if` Statement
+## How to Run Your Tests
 
-Used when code should only run if a condition is true.
+### Run all tests:
+
+```bash
+mvn test
+```
+
+### Run module tests:
+
+```bash
+mvn test -Dtest=ConditionExercisesTest
+```
+
+---
+
+# 🧠 Core Conditional Concepts
+
+---
+
+## `if` Statement
+
+Used when code should only execute if a condition is true.
 
 ```java
 if (condition) {
-    // Executes only if condition is true
-}
-```
-
-### Real-Life Example:
-
-If it is raining, take an umbrella.
-
-```java
-if (raining) {
-    takeUmbrella();
+    // code runs
 }
 ```
 
 ---
 
-## 🔹 `if / else`
+## `if / else`
 
 Used when there are two possible outcomes.
 
@@ -73,15 +92,11 @@ if (condition) {
 }
 ```
 
-### Real-Life Example:
-
-If you are over 18, enter the club. Otherwise, stay outside.
-
 ---
 
-## 🔹 `if / else if / else`
+## `if / else if / else`
 
-Used when multiple conditions are possible.
+Used when multiple conditions must be evaluated.
 
 ```java
 if (condition1) {
@@ -93,17 +108,9 @@ if (condition1) {
 }
 ```
 
-### Real-Life Example:
-
-Weather:
-
-* Hot
-* Mild
-* Cold
-
 ---
 
-# 🔹 Comparison Operators
+## Comparison Operators
 
 | Operator | Meaning               |
 | -------- | --------------------- |
@@ -116,19 +123,23 @@ Weather:
 
 ---
 
-# 🧪 Practical Exercises
+# 🧪 Fundamentals Coding Practice
 
 ---
 
-# 📂 File to Implement:
+## Project Structure
 
-```java
-ConditionExercises.java
+```plaintext
+module02/
+├── ConditionExercises.java
+├── tests/
+│   └── ConditionExercisesTest.java
+└── README.md
 ```
 
 ---
 
-# 🧩 Exercise 1: Temperature Alert
+# Question 1 - Temperature Alert
 
 ## Function:
 
@@ -136,13 +147,13 @@ ConditionExercises.java
 exercise1_temperatureAlert(int temperature)
 ```
 
-## 📖 Detailed Description:
+### Detailed Objective:
 
-This function checks whether the current temperature is considered hot.
+Determine whether a temperature reading is considered hot.
 
 ### Rules:
 
-* If temperature is **greater than 30°C** → return:
+* If temperature is above 30°C:
 
 ```java
 "It's hot!"
@@ -154,19 +165,19 @@ This function checks whether the current temperature is considered hot.
 "It's not hot."
 ```
 
-## 🌍 Real-Life Example:
+---
 
-A weather app may warn users when outdoor temperatures are dangerously high.
+### Input:
 
-## 📥 Input:
+* Integer temperature
 
-* Integer temperature value
-
-## 📤 Output:
+### Output:
 
 * String message
 
-## 🧪 Example Test Cases:
+---
+
+### Examples:
 
 | Input | Output          |
 | ----- | --------------- |
@@ -174,14 +185,16 @@ A weather app may warn users when outdoor temperatures are dangerously high.
 | 30    | "It's not hot." |
 | 35    | "It's hot!"     |
 
-## ⚠ Edge Cases:
+---
 
-* Exactly `30` is NOT hot
-* Negative temperatures should still return `"It's not hot."`
+### Edge Cases:
+
+* Exactly 30 is NOT hot
+* Negative temperatures are not hot
 
 ---
 
-# 🧩 Exercise 2: Age Verification
+# Question 2 - Age Verification
 
 ## Function:
 
@@ -189,13 +202,13 @@ A weather app may warn users when outdoor temperatures are dangerously high.
 exercise2_ageVerification(int age)
 ```
 
-## 📖 Detailed Description:
+### Detailed Objective:
 
-This function verifies whether a person is legally old enough for access.
+Verify whether a user meets the minimum age requirement.
 
 ### Rules:
 
-* If age is **18 or older**:
+* Age 18 or older:
 
 ```java
 "Access granted"
@@ -207,19 +220,19 @@ This function verifies whether a person is legally old enough for access.
 "Access denied"
 ```
 
-## 🌍 Real-Life Example:
+---
 
-Website age restrictions, voting eligibility, or driving licenses.
-
-## 📥 Input:
+### Input:
 
 * Integer age
 
-## 📤 Output:
+### Output:
 
-* Access status string
+* String access result
 
-## 🧪 Example Test Cases:
+---
+
+### Examples:
 
 | Input | Output           |
 | ----- | ---------------- |
@@ -227,14 +240,16 @@ Website age restrictions, voting eligibility, or driving licenses.
 | 18    | "Access granted" |
 | 25    | "Access granted" |
 
-## ⚠ Edge Cases:
+---
 
-* Age exactly `18` must grant access
-* Negative ages should still deny access
+### Edge Cases:
+
+* Exactly 18 grants access
+* Negative values deny access
 
 ---
 
-# 🧩 Exercise 3: Even or Odd
+# Question 3 - Even or Odd
 
 ## Function:
 
@@ -242,39 +257,39 @@ Website age restrictions, voting eligibility, or driving licenses.
 exercise3_evenOrOdd(int number)
 ```
 
-## 📖 Detailed Description:
+### Detailed Objective:
 
-Determine whether a number is divisible by 2.
+Determine whether a number is even or odd.
 
 ### Rules:
 
-* If even:
+* Even:
 
 ```java
 "X is even"
 ```
 
-* If odd:
+* Odd:
 
 ```java
 "X is odd"
 ```
 
-(`X` should be replaced by the actual number)
+(`X` represents the actual number)
 
-## 🌍 Real-Life Example:
+---
 
-Checking table seat numbers, row positions, or alternating systems.
-
-## 📥 Input:
+### Input:
 
 * Integer number
 
-## 📤 Output:
+### Output:
 
 * Formatted string
 
-## 🧪 Example Test Cases:
+---
+
+### Examples:
 
 | Input | Output      |
 | ----- | ----------- |
@@ -282,14 +297,16 @@ Checking table seat numbers, row positions, or alternating systems.
 | 7     | "7 is odd"  |
 | 0     | "0 is even" |
 
-## ⚠ Edge Cases:
+---
+
+### Edge Cases:
 
 * Zero is even
-* Negative numbers can also be even or odd
+* Negative numbers can be even or odd
 
 ---
 
-# 🧩 Exercise 4: Discount Calculator
+# Question 4 - Discount Calculator
 
 ## Function:
 
@@ -297,39 +314,37 @@ Checking table seat numbers, row positions, or alternating systems.
 exercise4_discountCalculator(double price)
 ```
 
-## 📖 Detailed Description:
+### Detailed Objective:
 
-Calculate customer discounts based on purchase amount.
+Calculate discount percentage based on purchase amount.
 
 ### Rules:
 
-### If price > 1000:
+* Above 1000 → 20%
+* Between 500 and 1000 → 10%
+* Below 500 → 0%
 
-* 20% discount
+---
 
-### If price is between 500 and 1000:
-
-* 10% discount
-
-### If price < 500:
-
-* No discount
-
-## 📤 Output Format:
+### Output Format:
 
 ```java
 Discount: X%, Final price: RXXXX.XX
 ```
 
-## 🌍 Real-Life Example:
+---
 
-Retail stores offering bulk purchase discounts.
+### Input:
 
-## 📥 Input:
+* Double price
 
-* Product price as double
+### Output:
 
-## 🧪 Example Test Cases:
+* Formatted pricing string
+
+---
+
+### Examples:
 
 | Input | Output                              |
 | ----- | ----------------------------------- |
@@ -337,15 +352,17 @@ Retail stores offering bulk purchase discounts.
 | 750   | Discount: 10%, Final price: R675.00 |
 | 300   | Discount: 0%, Final price: R300.00  |
 
-## ⚠ Edge Cases:
+---
 
-* Exactly `1000` gets 10%
-* Exactly `500` gets 10%
-* Use `String.format()` for currency formatting
+### Edge Cases:
+
+* 500 gets 10%
+* 1000 gets 10%
+* Correct currency formatting required
 
 ---
 
-# 🧩 Exercise 5: Weather Advisor
+# Question 5 - Weather Advisor
 
 ## Function:
 
@@ -353,9 +370,9 @@ Retail stores offering bulk purchase discounts.
 exercise5_weatherAdvisor(int temperature)
 ```
 
-## 📖 Detailed Description:
+### Detailed Objective:
 
-Provide weather advice based on temperature range.
+Categorize weather conditions based on temperature.
 
 ### Rules:
 
@@ -365,7 +382,7 @@ Provide weather advice based on temperature range.
 "It's hot!"
 ```
 
-* Between 15 and 30:
+* 15 to 30:
 
 ```java
 "It's mild."
@@ -377,19 +394,19 @@ Provide weather advice based on temperature range.
 "It's cold."
 ```
 
-## 🌍 Real-Life Example:
+---
 
-Weather forecast applications.
-
-## 📥 Input:
+### Input:
 
 * Integer temperature
 
-## 📤 Output:
+### Output:
 
-* Weather condition string
+* Weather description string
 
-## 🧪 Example Test Cases:
+---
+
+### Examples:
 
 | Input | Output       |
 | ----- | ------------ |
@@ -397,14 +414,16 @@ Weather forecast applications.
 | 20    | "It's mild." |
 | 10    | "It's cold." |
 
-## ⚠ Edge Cases:
+---
 
-* `15` = mild
-* `30` = mild
+### Edge Cases:
+
+* 15 = mild
+* 30 = mild
 
 ---
 
-# 🧩 Exercise 6: Age Group
+# Question 6 - Age Group
 
 ## Function:
 
@@ -412,9 +431,9 @@ Weather forecast applications.
 exercise6_ageGroup(int age)
 ```
 
-## 📖 Detailed Description:
+### Detailed Objective:
 
-Categorize people into age groups.
+Categorize individuals into age groups.
 
 ### Rules:
 
@@ -436,19 +455,19 @@ Categorize people into age groups.
 "Adult"
 ```
 
-## 🌍 Real-Life Example:
+---
 
-School systems, social apps, marketing demographics.
-
-## 📥 Input:
+### Input:
 
 * Integer age
 
-## 📤 Output:
+### Output:
 
 * Category string
 
-## 🧪 Example Test Cases:
+---
+
+### Examples:
 
 | Input | Output  |
 | ----- | ------- |
@@ -456,68 +475,42 @@ School systems, social apps, marketing demographics.
 | 15    | "Teen"  |
 | 25    | "Adult" |
 
-## ⚠ Edge Cases:
+---
 
-* `13` = Teen
-* `19` = Teen
-* `20` = Adult
+### Edge Cases:
+
+* 13 = Teen
+* 19 = Teen
+* 20 = Adult
 
 ---
 
-# ✅ Requirements Checklist
+# 💡 Key Developer Tips
 
-Before moving on:
-
-* [ ] Implement all methods
-* [ ] Follow exact return strings
-* [ ] Test all boundary conditions
-* [ ] Run:
-
-```bash
-mvn test
-```
+* Pay close attention to boundaries
+* Be precise with comparison operators
+* Follow exact output formatting
+* Use `String.format()` when necessary
+* Test all edge cases carefully
 
 ---
 
-# 💡 Important Tips
+# 🚀 End Goal
 
-### Use modulus for even/odd:
+By completing this module, you should:
 
-```java
-number % 2 == 0
-```
-
-### Use `String.format()` for pricing:
-
-```java
-String.format("Discount: %d%%, Final price: R%.2f", discount, finalPrice);
-```
-
-### Be careful with:
-
-* Greater than vs greater than or equal
-* Exact formatting
-* Boundary values
-
----
-
-# 🚀 Final Goal
-
-By completing this module, you should confidently:
-
-* Build decision-making logic
-* Write clean conditional statements
-* Handle multiple scenarios
-* Understand real-world programming logic
-* Improve debugging skills
-* Prepare for larger Java applications
+* Build strong decision-making logic
+* Understand branching conditions thoroughly
+* Handle multiple outcomes confidently
+* Improve debugging precision
+* Strengthen real-world programming ability
 
 ---
 
 # 🏆 Success Mindset
 
-Conditionals are the foundation of intelligent software.
+Conditional logic forms the backbone of intelligent software.
 
-Every major application—from banking systems to games to robotics—depends on decision-making.
+From security systems to weather apps to robotics, software constantly makes decisions.
 
-Master this module thoroughly before progressing.
+Master conditionals thoroughly before progressing.
