@@ -2,64 +2,85 @@
 
 ---
 
-## Learning Outcomes Assessed
+## 🎯 Learning Objectives
 
-* String Manipulation
-* Text Validation
-* Input Formatting
-* Substring Operations
-* Pattern Recognition
-* Real-World Data Processing
+In this module, you will:
+
+- Work with Java `String` methods effectively
+- Use `substring`, `length`, indexing, and validation methods
+- Validate and format text accurately
+- Solve real-world string manipulation problems
+- Prevent common index and formatting errors
+- Build confidence handling user input and text processing
 
 ---
 
-## Module Structure
+## 🎥 Video Learning Resource
+
+https://youtu.be/xTtL8E4LzTQ
+
+### ⏱ Watch These Sections Only:
+
+- **02:10:20 → 02:27:00**
+- **02:35:19 → 02:41:10**
+
+👉 Watch in parts and practice immediately after each concept.
+
+---
+
+# 📚 Learning Outcomes Assessed
+
+- String Manipulation
+- Text Validation
+- Input Formatting
+- Substring Operations
+- Pattern Recognition
+- Real-World Data Processing
+- Defensive Programming
+- Java String API Usage
+
+---
+
+# 🛠 Module Structure
 
 This module contains:
 
 ### Coding Practice:
 
-All questions must be completed inside:
+Complete all functions inside:
 
-```java id="x9k3dp"
+```java
 StringExercises.java
 ```
 
-Your task is to:
+---
 
-* Read each function carefully
-* Fully understand how text should be processed
-* Use Java `String` methods effectively
-* Handle formatting and validation rules precisely
-* Prevent index and formatting errors
-* Pass all tests successfully
+# ✅ What You Must Do
+
+For this module, you must:
+
+- Understand how each string problem works
+- Use Java `String` methods correctly
+- Handle formatting precisely
+- Prevent index errors
+- Validate inputs carefully
+- Handle all edge cases
+- Return exact expected outputs
+- Pass all unit tests successfully
 
 ---
 
-## Your Goal
-
-For each function:
-
-* Use valid Java syntax
-* Manipulate strings safely
-* Validate text accurately
-* Handle edge cases carefully
-* Follow exact formatting requirements
-* Ensure all unit tests pass
-
----
-
-## How to Run Your Tests
+# 🧪 How to Run Your Tests
 
 ### Run all tests:
 
-```bash id="e5pk1v"
+```bash
 mvn test
 ```
 
-### Run module tests:
+### Run only this module’s tests:
 
-```bash id="u7lm2c"
+```bash
 mvn test -Dtest=StringExercisesTest
 ```
 
@@ -69,23 +90,23 @@ mvn test -Dtest=StringExercisesTest
 
 ---
 
-## What is a String?
+## 🔹 What is a String?
 
-A `String` is a sequence of characters used to represent text.
+A `String` is a sequence of characters representing text.
 
-```java id="8m2vrx"
+```java
 String text = "Hello";
 ```
 
 ---
 
-## Common String Methods
+## 🔹 Common String Methods
 
 ### `length()`
 
-Returns the total number of characters.
+Returns total character count.
 
-```java id="f2p9bc"
+```java
 text.length();
 ```
 
@@ -95,7 +116,7 @@ text.length();
 
 Extracts part of a string.
 
-```java id="7nt4wq"
+```java
 text.substring(0, 2);
 ```
 
@@ -103,9 +124,9 @@ text.substring(0, 2);
 
 ### `contains()`
 
-Checks if text exists inside another string.
+Checks if specific text exists.
 
-```java id="9r3vze"
+```java
 text.contains("@");
 ```
 
@@ -113,78 +134,58 @@ text.contains("@");
 
 ### `startsWith()`
 
-Checks how a string begins.
+Checks beginning of string.
 
 ---
 
 ### `endsWith()`
 
-Checks how a string ends.
+Checks ending of string.
 
 ---
 
 ### `equals()`
 
-Compares exact text values.
+Checks exact equality.
 
 ---
 
-## Important Reminder
+## 🔹 Important Reminder
 
-Strings are immutable.
+Strings are immutable:
 
-This means:
-
-* Original strings cannot be changed directly
-* New strings are created after modifications
+- Original strings are unchanged
+- New strings are created after modifications
 
 ---
 
-# 🧪 Fundamentals Coding Practice
+# 🧪 Exercises
 
 ---
 
-## Project Structure
-
-```plaintext id="4jw7yb"
-module05/
-├── StringExercises.java
-├── tests/
-│   └── StringExercisesTest.java
-└── README.md
-```
-
----
-
-# Question 1 - Extract Middle Name
+# 🧩 Question 1 - Extract Middle Name
 
 ## Function:
 
-```java id="pv7j2r"
+```java
 exercise1_extractMiddleName(String fullName)
 ```
 
-### Detailed Objective:
+---
 
-Create a method that extracts the middle name or names from a full name.
+### Objective:
 
-A full name may contain:
-
-* First name
-* One or more middle names
-* Last name
-
-Your task is to return only the middle portion.
+Return only the middle name(s) from a full name.
 
 ---
 
 ### Rules:
 
-* Return middle name(s) only
-* Exclude first and last names
-* If no middle name exists, return:
+- Exclude first and last names
+- Return middle portion only
+- If no middle name exists, return:
 
-```java id="g2tm4n"
+```java
 ""
 ```
 
@@ -192,233 +193,193 @@ Your task is to return only the middle portion.
 
 ### Input:
 
-* Full name as a single string
+- `String fullName`
 
 ---
 
 ### Output:
 
-* Middle name(s) string
+- `String`
 
 ---
 
 ### Examples:
 
-| Input                  | Output     |
-| ---------------------- | ---------- |
-| "John Michael Doe"     | "Michael"  |
-| "Sarah Jane Ann Smith" | "Jane Ann" |
-| "John Doe"             | ""         |
+| Input | Output |
+|------|--------|
+| `"John Michael Doe"` | `"Michael"` |
+| `"Sarah Jane Ann Smith"` | `"Jane Ann"` |
+| `"John Doe"` | `""` |
 
 ---
 
 ### Edge Cases:
 
-* Only first and last name
-* Multiple middle names
-* Extra spaces
+- Only first and last names
+- Multiple middle names
+- Extra spaces
 
 ---
 
-# Question 2 - Validate ID Prefix
+# 🧩 Question 2 - Validate ID Prefix
 
 ## Function:
 
-```java id="j6wd1x"
+```java
 exercise2_validateIDPrefix(String id)
 ```
 
-### Detailed Objective:
+---
 
-Validate whether an ID follows the correct national format.
+### Objective:
 
-The ID must:
-
-* Start with:
-
-```java id="q7m4zc"
-"ZA"
-```
-
-* Be followed by exactly 4 digits
+Validate national ID format.
 
 ---
 
-### Valid Format:
+### Rules:
 
-```java id="0y1q8k"
+- Must start with `"ZA"`
+- Must be followed by exactly 4 digits
+
+---
+
+### Valid Example:
+
+```java
 ZA1234
 ```
 
 ---
 
-### Rules:
+### Return:
 
-* Return `true` if valid
-* Return `false` otherwise
-
----
-
-### Input:
-
-* String ID
-
----
-
-### Output:
-
-* Boolean validation result
+- `true` if valid
+- `false` otherwise
 
 ---
 
 ### Examples:
 
-| Input    | Output |
-| -------- | ------ |
-| "ZA1234" | true   |
-| "ZA9999" | true   |
-| "US1234" | false  |
-| "ZA12"   | false  |
+| Input | Output |
+|------|--------|
+| `"ZA1234"` | `true` |
+| `"ZA9999"` | `true` |
+| `"US1234"` | `false` |
+| `"ZA12"` | `false` |
 
 ---
 
 ### Edge Cases:
 
-* Incorrect prefix
-* Too many digits
-* Too few digits
-* Non-digit characters
+- Wrong prefix
+- Too many digits
+- Too few digits
+- Non-digit characters
 
 ---
 
-# Question 3 - Remove Protocol
+# 🧩 Question 3 - Remove Protocol
 
 ## Function:
 
-```java id="s8pk5m"
+```java
 exercise3_removeProtocol(String url)
 ```
 
-### Detailed Objective:
+---
 
-Remove common web protocols from a URL.
+### Objective:
 
-Supported protocols:
-
-* `http://`
-* `https://`
-
-Your method should strip these prefixes and return only the remaining web address.
+Remove `http://` or `https://` from URLs.
 
 ---
 
 ### Rules:
 
-* Remove protocol if present
-* Return unchanged string if no protocol exists
-
----
-
-### Input:
-
-* URL string
-
----
-
-### Output:
-
-* Cleaned URL string
+- Remove protocol if present
+- Return unchanged string if absent
 
 ---
 
 ### Examples:
 
-| Input                | Output        |
-| -------------------- | ------------- |
-| "https://google.com" | "google.com"  |
-| "http://example.org" | "example.org" |
-| "openai.com"         | "openai.com"  |
+| Input | Output |
+|------|--------|
+| `"https://google.com"` | `"google.com"` |
+| `"http://example.org"` | `"example.org"` |
+| `"openai.com"` | `"openai.com"` |
 
 ---
 
 ### Edge Cases:
 
-* No protocol
-* Mixed domains
-* Empty strings
+- Missing protocol
+- Empty string
+- Mixed domains
 
 ---
 
-# Question 4 - Palindrome Checker
+# 🧩 Question 4 - Palindrome Checker
 
 ## Function:
 
-```java id="m9fr2b"
+```java
 exercise4_isPalindrome(String s)
 ```
 
-### Detailed Objective:
+---
 
-Determine whether a string reads the same forwards and backwards.
+### Objective:
 
-A palindrome remains identical when reversed.
+Determine whether text reads the same forward and backward.
 
 ---
 
 ### Rules:
 
-* Return `true` if palindrome
-* Return `false` otherwise
-
----
-
-### Input:
-
-* String `s`
-
----
-
-### Output:
-
-* Boolean result
+- Return `true` if palindrome
+- Return `false` otherwise
 
 ---
 
 ### Examples:
 
-| Input     | Output |
-| --------- | ------ |
-| "racecar" | true   |
-| "level"   | true   |
-| "hello"   | false  |
+| Input | Output |
+|------|--------|
+| `"racecar"` | `true` |
+| `"level"` | `true` |
+| `"hello"` | `false` |
 
 ---
 
 ### Edge Cases:
 
-* Single character
-* Empty string
-* Mixed case sensitivity depending on tests
+- Empty string
+- Single character
+- Case sensitivity depending on tests
 
 ---
 
-# Question 5 - Format Phone Number
+# 🧩 Question 5 - Format Phone Number
 
 ## Function:
 
-```java id="k2wq8f"
+```java
 exercise5_formatPhoneNumber(String phone)
 ```
 
-### Detailed Objective:
+---
 
-Validate and format a raw 10-digit phone number into a standardized display format.
+### Objective:
+
+Validate and format a 10-digit phone number.
 
 ---
 
 ### Required Format:
 
-```java id="j5yx2u"
+```java
 (XXX) XXX-XXXX
 ```
 
@@ -426,233 +387,183 @@ Validate and format a raw 10-digit phone number into a standardized display form
 
 ### Rules:
 
-* Must contain exactly 10 digits
-* If invalid, return:
+- Must contain exactly 10 digits
+- If invalid, return:
 
-```java id="m1rq7v"
+```java
 "Invalid phone number"
 ```
 
 ---
 
-### Input:
-
-* Raw phone number string
-
----
-
-### Output:
-
-* Formatted number or error string
-
----
-
 ### Examples:
 
-| Input        | Output                 |
-| ------------ | ---------------------- |
-| "1234567890" | "(123) 456-7890"       |
-| "5551234567" | "(555) 123-4567"       |
-| "12345"      | "Invalid phone number" |
+| Input | Output |
+|------|--------|
+| `"1234567890"` | `"(123) 456-7890"` |
+| `"5551234567"` | `"(555) 123-4567"` |
+| `"12345"` | `"Invalid phone number"` |
 
 ---
 
 ### Edge Cases:
 
-* Too short
-* Too long
-* Contains letters
-* Contains symbols
+- Too short
+- Too long
+- Letters
+- Symbols
 
 ---
 
-# Question 6 - Validate Email
+# 🧩 Question 6 - Validate Email
 
 ## Function:
 
-```java id="6pw1xm"
+```java
 exercise6_validateEmail(String email)
 ```
 
-### Detailed Objective:
+---
 
-Validate whether an email follows simplified formatting rules.
+### Objective:
+
+Validate simplified email format.
 
 ---
 
 ### Rules:
 
-* Must contain exactly one `@`
-* Must end with:
-
-```java id="j9r6tb"
-.com
-```
-
-or
-
-```java id="c3nv8q"
-.org
-```
+- Exactly one `@`
+- Must end with:
+  - `.com`
+  - `.org`
 
 ---
 
 ### Return:
 
-* `true` if valid
-* `false` otherwise
-
----
-
-### Input:
-
-* Email string
-
----
-
-### Output:
-
-* Boolean result
+- `true` if valid
+- `false` otherwise
 
 ---
 
 ### Examples:
 
-| Input                                         | Output |
-| --------------------------------------------- | ------ |
-| "[user@example.com](mailto:user@example.com)" | true   |
-| "[admin@site.org](mailto:admin@site.org)"     | true   |
-| "bademail.com"                                | false  |
-| "user@@site.com"                              | false  |
+| Input | Output |
+|------|--------|
+| `"user@example.com"` | `true` |
+| `"admin@site.org"` | `true` |
+| `"bademail.com"` | `false` |
+| `"user@@site.com"` | `false` |
 
 ---
 
 ### Edge Cases:
 
-* Multiple `@`
-* Missing domain
-* Invalid endings
-* Empty strings
+- Multiple `@`
+- Missing domain
+- Invalid suffix
+- Empty string
 
 ---
 
-# Question 7 - Capitalize First Letter
+# 🧩 Question 7 - Capitalize First Letter
 
 ## Function:
 
-```java id="h4zv7q"
+```java
 exercise7_capitalizeFirstLetter(String s)
 ```
 
-### Detailed Objective:
+---
 
-Capitalize only the first letter of a string while leaving the remaining characters unchanged.
+### Objective:
+
+Capitalize only the first character.
 
 ---
 
 ### Rules:
 
-* First character becomes uppercase
-* Remaining text stays the same
-* Empty string should return empty string
-
----
-
-### Input:
-
-* String `s`
-
----
-
-### Output:
-
-* Updated string
+- First character uppercase
+- Remaining characters unchanged
+- Empty string returns empty string
 
 ---
 
 ### Examples:
 
-| Input   | Output  |
-| ------- | ------- |
-| "hello" | "Hello" |
-| "java"  | "Java"  |
-| ""      | ""      |
+| Input | Output |
+|------|--------|
+| `"hello"` | `"Hello"` |
+| `"java"` | `"Java"` |
+| `""` | `""` |
 
 ---
 
 ### Edge Cases:
 
-* Empty string
-* Already capitalized
-* Single character strings
+- Empty string
+- Already capitalized
+- Single character
 
 ---
 
-# Question 8 - Extract Domain
+# 🧩 Question 8 - Extract Domain
 
 ## Function:
 
-```java id="2cqt8m"
+```java
 exercise8_extractDomain(String url)
 ```
 
-### Detailed Objective:
+---
+
+### Objective:
 
 Extract only the domain name from a URL.
-
-This requires:
-
-* Removing protocol if present
-* Returning only the domain section
 
 ---
 
 ### Rules:
 
-* Remove `http://` or `https://`
-* Return domain only
-
----
-
-### Input:
-
-* URL string
-
----
-
-### Output:
-
-* Domain string
+- Remove protocol if present
+- Return domain only
+- Ignore path after domain
 
 ---
 
 ### Examples:
 
-| Input                     | Output        |
-| ------------------------- | ------------- |
-| "https://google.com/page" | "google.com"  |
-| "http://openai.org/about" | "openai.org"  |
-| "example.com/home"        | "example.com" |
+| Input | Output |
+|------|--------|
+| `"https://google.com/page"` | `"google.com"` |
+| `"http://openai.org/about"` | `"openai.org"` |
+| `"example.com/home"` | `"example.com"` |
 
 ---
 
 ### Edge Cases:
 
-* Missing protocol
-* Paths after domain
-* Empty strings
+- Missing protocol
+- Paths
+- Empty string
 
 ---
 
 # 💡 Key Developer Tips
 
-* Always check string length before substring
-* Prevent index out-of-bounds errors
-* Validate inputs carefully
-* Use `startsWith()`, `endsWith()`, and `contains()` effectively
-* Strings are immutable
-* Build defensive programming habits
-* Test malformed inputs thoroughly
+- Always check string length before using `substring`
+- Prevent index out-of-bounds errors
+- Validate input before processing
+- Use:
+  - `startsWith()`
+  - `endsWith()`
+  - `contains()`
+  - `equals()`
+- Remember strings are immutable
+- Test malformed inputs thoroughly
+- Build defensive coding habits
 
 ---
 
@@ -660,19 +571,24 @@ This requires:
 
 By completing this module, you should:
 
-* Manipulate strings confidently
-* Process and validate user input
-* Format text professionally
-* Solve practical text-processing problems
-* Improve debugging precision
-* Prepare for more advanced parsing and backend development
+- Manipulate strings confidently
+- Validate user input effectively
+- Format text professionally
+- Solve real-world text problems
+- Improve debugging precision
+- Strengthen backend and API development readiness
 
 ---
 
 # 🏆 Success Mindset
 
-String processing is one of the most practical programming skills.
+String processing powers:
 
-From user authentication to web applications to APIs, software constantly processes text.
+- User authentication
+- APIs
+- Web applications
+- Form validation
+- Search engines
+- Data cleaning systems
 
-Master string manipulation thoroughly before progressing.
+Master string manipulation thoroughly — text processing is one of the most practical programming skills.
