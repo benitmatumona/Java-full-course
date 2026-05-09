@@ -1,70 +1,103 @@
 package module11;
 
-import org.junit.jupiter.api.Test;
-import java.util.*;
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
-public class CollectionsExercisesTest {
+/**
+ * 📘 Module 11: Collections Exercises (Extended Version)
+ *
+ * This class contains additional practice questions on:
+ * - ArrayLists
+ * - HashMaps
+ * - Advanced collection operations
+ * - Frequency analysis
+ * - Searching and filtering
+ * - Basic bi-directional mapping concept (simulated bi-map)
+ *
+ * ⚠️ DO NOT modify method signatures.
+ */
+public class CollectionsExercises {
 
-    @Test
-    void testExercise1_sumWrapper() {
-        assertEquals(5, CollectionsExercises.exercise1_sumWrapper(2, 3));
-        assertEquals(3, CollectionsExercises.exercise1_sumWrapper(null, 3));
-        assertEquals(0, CollectionsExercises.exercise1_sumWrapper(null, null));
+    // =========================
+    // ORIGINAL EXERCISES (1–7)
+    // =========================
+
+    public static int exercise1_sumWrapper(Integer a, Integer b) {
+        return 0;
     }
 
-    @Test
-    void testExercise2_filterEven() {
-        ArrayList<Integer> input = new ArrayList<>(Arrays.asList(1,2,3,4));
-        assertEquals(Arrays.asList(2,4),
-                CollectionsExercises.exercise2_filterEven(input));
+    public static ArrayList<Integer> exercise2_filterEven(ArrayList<Integer> list) {
+        return null;
     }
 
-    @Test
-    void testExercise3_listToString() {
-        ArrayList<Integer> input = new ArrayList<>(Arrays.asList(1,2,3));
-        assertEquals("1, 2, 3",
-                CollectionsExercises.exercise3_listToString(input));
+    public static String exercise3_listToString(ArrayList<Integer> list) {
+        return null;
     }
 
-    @Test
-    void testExercise4_mapLookup() {
-        HashMap<String,Integer> map = new HashMap<>();
-        map.put("a",1);
-
-        assertEquals(1,
-                CollectionsExercises.exercise4_mapLookup(map,"a"));
-
-        assertEquals(-1,
-                CollectionsExercises.exercise4_mapLookup(map,"b"));
+    public static int exercise4_mapLookup(HashMap<String, Integer> map, String key) {
+        return 0;
     }
 
-    @Test
-    void testExercise5_countFrequencies() {
-        ArrayList<String> words = new ArrayList<>(Arrays.asList("a","b","a"));
-
-        HashMap<String,Integer> result =
-                CollectionsExercises.exercise5_countFrequencies(words);
-
-        assertEquals(2, result.get("a"));
-        assertEquals(1, result.get("b"));
+    public static HashMap<String, Integer> exercise5_countFrequencies(ArrayList<String> words) {
+        return null;
     }
 
-    @Test
-    void testExercise6_dayType() {
-        assertEquals("Weekday",
-                CollectionsExercises.exercise6_dayType(Day.MONDAY));
-
-        assertEquals("Weekend",
-                CollectionsExercises.exercise6_dayType(Day.SUNDAY));
+    public static String exercise6_dayType(Day day) {
+        return null;
     }
 
-    @Test
-    void testExercise7_gradeDescription() {
-        assertEquals("Excellent",
-                CollectionsExercises.exercise7_gradeDescription(Grade.A));
+    public static String exercise7_gradeDescription(Grade grade) {
+        return null;
+    }
 
-        assertEquals("Fail",
-                CollectionsExercises.exercise7_gradeDescription(Grade.F));
+    // ==========================================
+    // 🔥 NEW EXTENDED EXERCISES (8–15)
+    // ==========================================
+
+    // Exercise 8
+    public static ArrayList<Integer> exercise8_removeDuplicates(ArrayList<Integer> list) {
+        return null;
+    }
+
+    // Exercise 9
+    public static int exercise9_sumList(ArrayList<Integer> list) {
+        return 0;
+    }
+
+    // Exercise 10
+    public static ArrayList<String> exercise10_filterWordsByLength(ArrayList<String> words, int length) {
+        return null;
+    }
+
+    // Exercise 11
+    public static HashMap<Integer, String> exercise11_reverseMap(HashMap<String, Integer> map) {
+        return null;
+    }
+
+    // Exercise 12
+    public static boolean exercise12_containsValue(HashMap<String, Integer> map, int value) {
+        return false;
+    }
+
+    // Exercise 13 (Bi-directional Map concept simulation)
+    public static String exercise13_biMapLookupForward(HashMap<String, String> biMap, String key) {
+        return null;
+    }
+
+    public static String exercise13_biMapLookupReverse(HashMap<String, String> biMap, String value) {
+        return null;
+    }
+
+    // Exercise 14
+    public static ArrayList<String> exercise14_sortStrings(ArrayList<String> list) {
+        return null;
+    }
+
+    // Exercise 15
+    public static HashMap<String, Integer> exercise15_mergeFrequencies(
+            ArrayList<String> list1,
+            ArrayList<String> list2
+    ) {
+        return null;
     }
 }
