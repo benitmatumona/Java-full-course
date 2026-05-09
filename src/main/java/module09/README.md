@@ -2,6 +2,62 @@
 
 ---
 
+## 🎯 Learning Objectives
+
+In this module, you will:
+
+* Understand classes and objects
+* Use constructors (including overloaded constructors)
+* Apply inheritance and method overriding
+* Use encapsulation with getters and setters
+* Work with abstraction and interfaces
+* Understand and apply polymorphism
+* Build structured, scalable Java applications
+
+---
+
+## 🎥 Video Learning Resource
+
+[Java Full Course for Beginners by Bro Code](https://youtu.be/xTtL8E4LzTQ)
+
+### ⏱ Watch These Sections in Order (VERY IMPORTANT):
+
+### 1️⃣ Classes + Constructors
+
+* **06:41:47 → 07:01:45**
+
+### 2️⃣ Constructor Overloading + Arrays of Objects
+
+* **07:01:45 → 07:14:07**
+
+### 3️⃣ Static + Inheritance
+
+* **07:14:07 → 07:31:09**
+
+### 4️⃣ `super`, Overriding, `toString()`
+
+* **07:31:09 → 07:46:08**
+
+### 5️⃣ Abstraction + Interfaces
+
+* **07:51:58 → 08:07:44**
+
+### 6️⃣ Polymorphism
+
+* **08:07:44 → 08:19:35**
+
+---
+
+### 📚 Study Method:
+
+* Watch section-by-section
+* Pause frequently
+* Build each class yourself
+* Test every concept
+* Focus on understanding architecture
+
+---
+
 ## Learning Outcomes Assessed
 
 * Classes & Objects
@@ -20,13 +76,9 @@
 
 ## Module Structure
 
-This module contains:
+### Coding Practice Files:
 
-### Coding Practice:
-
-You will complete multiple Java class files:
-
-```java id="z4m8cv"
+```java
 Person.java
 Student.java
 Animal.java
@@ -35,31 +87,20 @@ Playable.java
 
 ---
 
-## Your task is to:
+## Your Task
 
-* Build real Java classes
+You must:
+
+* Build proper Java classes
 * Understand object creation deeply
-* Apply constructor logic properly
-* Use inheritance and `super`
-* Protect data using encapsulation
-* Override methods professionally
-* Work with abstraction and interfaces
-* Understand how polymorphism works in larger systems
+* Apply constructor logic correctly
+* Use overloaded constructors
+* Protect data with encapsulation
+* Implement inheritance professionally
+* Override methods properly
+* Use abstract classes and interfaces
+* Demonstrate polymorphism
 * Pass all tests successfully
-
----
-
-## Your Goal
-
-For each class:
-
-* Use valid Java syntax
-* Follow true OOP design principles
-* Build scalable reusable code
-* Handle edge cases
-* Keep code structured
-* Follow exact required formats
-* Ensure all unit tests pass
 
 ---
 
@@ -67,13 +108,13 @@ For each class:
 
 ### Run all tests:
 
-```bash id="n8x2pq"
+```bash
 mvn test
 ```
 
-### Run module tests:
+### Run module-specific tests:
 
-```bash id="k3v7tr"
+```bash
 mvn test -Dtest=Module09Test
 ```
 
@@ -87,24 +128,20 @@ mvn test -Dtest=Module09Test
 
 A class is a blueprint for creating objects.
 
----
-
 ### Example:
 
-```java id="x7p4md"
+```java
 Person person = new Person("John", 25);
 ```
 
----
+### Real-World Use:
 
-### Real Purpose:
-
-Classes help developers model real-world entities such as:
+Classes model entities like:
 
 * People
 * Students
-* Cars
-* Bank accounts
+* Vehicles
+* Bank Accounts
 * Animals
 
 ---
@@ -113,92 +150,79 @@ Classes help developers model real-world entities such as:
 
 A constructor initializes an object when it is created.
 
----
-
 ### Example:
 
-```java id="t5q9wn"
+```java
 public Person(String name, int age)
 ```
 
----
-
 ### Why It Matters:
 
-Constructors ensure objects start with valid data.
+* Ensures valid initialization
+* Sets object state
+* Reduces setup errors
 
 ---
 
 # 🔹 What is Constructor Overloading?
 
-Multiple constructors with different parameters.
-
----
-
-### Why:
-
-Allows flexible object creation.
-
----
+Multiple constructors with different parameter lists.
 
 ### Example:
 
-```java id="v2m8ky"
+```java
 new Person()
 new Person("John")
 new Person("John", 25)
 ```
 
+### Benefit:
+
+Allows flexible object creation.
+
 ---
 
 # 🔹 What is Encapsulation?
 
-Encapsulation protects object data.
+Encapsulation protects data using:
 
----
-
-### Standard Practice:
-
-* Fields → `private`
-* Access → getters/setters
-
----
+* `private` fields
+* Public getters
+* Public setters
 
 ### Benefit:
 
-Prevents invalid data entry.
+* Prevents invalid data
+* Improves security
+* Makes code maintainable
 
 ---
 
 # 🔹 What is Inheritance?
 
-Inheritance allows one class to reuse another class’s properties and methods.
-
----
+Inheritance allows one class to extend another.
 
 ### Example:
 
-```java id="j8x4rf"
+```java
 Student extends Person
 ```
 
----
-
 ### Benefit:
 
-Reduces duplicated code.
+* Code reuse
+* Cleaner architecture
+* Shared functionality
 
 ---
 
 # 🔹 What is Method Overriding?
 
-A child class replaces parent behavior.
-
----
+A child class replaces inherited behavior.
 
 ### Example:
 
-```java id="p4k7sz"
+```java
 toString()
 ```
 
@@ -212,23 +236,23 @@ Abstract classes define required behavior without full implementation.
 
 # 🔹 What are Interfaces?
 
-Interfaces define behaviors multiple classes can implement.
+Interfaces enforce required behaviors.
 
 ---
 
 # 🔹 What is Polymorphism?
 
-One parent type can represent multiple child forms.
+One parent type can represent many child forms.
 
 ---
 
 # 🧪 Project Structure
 
-```plaintext id="u6q3lv"
+```plaintext
 module09/
-├── Animal.java
 ├── Person.java
 ├── Student.java
+├── Animal.java
 ├── Playable.java
 ├── tests/
 │   └── Module09Test.java
@@ -237,115 +261,95 @@ module09/
 
 ---
 
-# 🔹 Part 1: Classes & Constructors
+# 🧩 Part 1: Classes & Constructors
 
 # Question 1 - Person Class
 
 ## Class:
 
-```java id="w9z2ct"
+```java
 Person
 ```
 
 ---
 
-### Detailed Objective:
+### Objective:
 
-Create a `Person` class that represents a human being with:
+Create a `Person` class with:
 
-* `name`
-* `age`
-
-This exercise teaches:
-
-* Class creation
-* Constructors
-* Object initialization
-* Overloading
-
----
-
-### Required Fields:
+### Fields:
 
 * `private String name`
 * `private int age`
 
 ---
 
-### Constructors Required:
-
----
+### Required Constructors:
 
 ### Default Constructor:
 
-```java id="f3v8qp"
+```java
 Person()
 ```
 
 Rules:
 
-* Name should default appropriately
-* Age should default to `0`
+* Default name
+* Age = `0`
 
 ---
 
 ### Parameterized Constructor:
 
-```java id="r7m4tk"
+```java
 Person(String name, int age)
 ```
 
 Rules:
 
-* Set both values directly
+* Set both values
 
 ---
 
 ### Overloaded Constructor:
 
-```java id="c2x9wn"
+```java
 Person(String name)
 ```
 
 Rules:
 
 * Set name
-* Age defaults to `0`
+* Age = `0`
 
 ---
 
-### Example:
+### Examples:
 
 | Code                   | Result         |
 | ---------------------- | -------------- |
-| new Person()           | Default values |
+| new Person()           | Default object |
 | new Person("John")     | Name only      |
 | new Person("John", 25) | Full object    |
 
 ---
 
-# 🔹 Part 2: Encapsulation
+# 🧩 Part 2: Encapsulation
 
 # Question 2 - Getters & Setters
-
----
-
-### Detailed Objective:
-
-Protect `Person` data properly.
 
 ---
 
 ### Rules:
 
 * Age cannot be negative
-* If negative → set age to `0`
+* Negative values become `0`
 
 ---
 
 ### Methods:
 
-```java id="m8q5pv"
+```java
 getName()
 setName()
 getAge()
@@ -363,43 +367,29 @@ setAge()
 
 ---
 
-### Developer Importance:
-
-This prevents invalid object states.
-
----
-
-# 🔹 Part 3: Inheritance
+# 🧩 Part 3: Inheritance
 
 # Question 3 - Student Class
 
 ## Class:
 
-```java id="d7x4km"
+```java
 Student extends Person
 ```
 
 ---
 
-### Detailed Objective:
-
-Create a `Student` class that inherits from `Person`.
-
----
-
 ### New Field:
 
-* `grade`
+* `private String grade`
 
 ---
 
 ### Constructor:
 
-```java id="b4v9qp"
+```java
 Student(String name, int age, String grade)
 ```
-
----
 
 ### Rules:
 
@@ -408,71 +398,35 @@ Student(String name, int age, String grade)
 
 ---
 
-### Why This Matters:
-
-Teaches:
-
-* Inheritance
-* Constructor chaining
-* Code reuse
-
----
-
-# 🔹 Part 4: Method Overriding
+# 🧩 Part 4: Method Overriding
 
 # Question 4 - Override `toString()`
 
----
-
-### Detailed Objective:
-
-Customize object printing.
-
----
-
 ### Required Format:
 
-```java id="k2m7zr"
+```java
 Name: John, Age: 20, Grade: A
 ```
 
 ---
 
-### Why:
-
-Readable object output is essential for:
-
-* Debugging
-* Logging
-* Professional development
-
----
-
-# 🔹 Part 5: Abstraction
+# 🧩 Part 5: Abstraction
 
 # Question 5 - Abstract Class `Animal`
 
 ## Class:
 
-```java id="h5x8vn"
+```java
 Animal
 ```
 
 ---
 
-### Detailed Objective:
-
-Create an abstract class that defines behavior but leaves implementation to child classes.
-
----
-
 ### Required Method:
 
-```java id="y4q7pt"
+```java
 makeSound()
 ```
-
----
 
 ### Rules:
 
@@ -481,90 +435,54 @@ makeSound()
 
 ---
 
-### Why:
-
-This teaches:
-
-* Shared design
-* Required implementation
-* Software architecture
-
----
-
-# 🔹 Part 6: Interfaces
+# 🧩 Part 6: Interfaces
 
 # Question 6 - Interface `Playable`
 
 ---
 
-### Detailed Objective:
-
-Create an interface for playable objects.
-
----
-
 ### Required Method:
 
-```java id="g8v3rm"
+```java
 play()
 ```
 
 ---
 
-### Why:
-
-Interfaces enforce consistent behavior across unrelated classes.
-
----
-
-# 🔹 Part 7: Polymorphism
+# 🧩 Part 7: Polymorphism
 
 # Question 7 - Demonstrate Polymorphism
 
 ---
 
-### Detailed Objective:
-
-Understand how parent references can store child objects.
-
----
-
-### Example:
-
-```java id="q6m9xt"
-Animal[] animals
-```
-
----
-
 ### Rules:
 
-* Store multiple child types
+* Create `Animal[]`
+* Store multiple child classes
 * Call `makeSound()`
-* Observe unique behavior
 
 ---
 
-### Why:
+### Goal:
 
-Polymorphism is foundational for:
+Understand:
 
-* Scalable systems
-* Enterprise software
-* Framework development
+* Dynamic behavior
+* Shared interfaces
+* Enterprise architecture principles
 
 ---
 
 # 💡 Key Developer Tips
 
-* Use `this` for fields
+* Use `this` for object fields
 * Use `super` for parent constructors
 * Keep fields private
-* Validate data
+* Validate setter inputs
 * Override methods carefully
-* Follow naming conventions
-* Design for reuse
-* Think like a software architect
+* Follow Java naming conventions
+* Think about scalability
+* Prioritize clean architecture
 
 ---
 
@@ -573,26 +491,28 @@ Polymorphism is foundational for:
 By completing this module, you should:
 
 * Build Java classes confidently
-* Understand professional OOP architecture
+* Understand professional OOP design
 * Use constructors properly
-* Apply inheritance and polymorphism
-* Protect object integrity
-* Write scalable maintainable code
-* Strengthen real-world software engineering ability
+* Apply inheritance correctly
+* Protect object data
+* Implement abstraction
+* Use interfaces effectively
+* Demonstrate polymorphism
+* Write scalable maintainable software
 
 ---
 
 # 🏆 Success Mindset
 
-Object-Oriented Programming is one of the most important foundations in software engineering.
+Object-Oriented Programming is foundational for professional software development.
 
 Mastering OOP prepares you for:
 
-* Backend development
-* Enterprise systems
+* Backend systems
+* Enterprise applications
+* APIs
 * Android development
 * Frameworks
-* APIs
-* Large-scale architecture
+* Large-scale software engineering
 
-This module represents a major step from beginner programming into professional software development.
+This module is your transition from beginner programming into real software architecture.
