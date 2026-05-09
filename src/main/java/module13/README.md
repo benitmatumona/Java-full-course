@@ -2,499 +2,317 @@
 
 ---
 
-## Learning Outcomes Assessed
+## 🎯 Learning Objectives
 
-* Date Handling
-* Time Handling
-* Date Formatting
-* Java Time API
-* Anonymous Classes
-* Runnable Interface
-* TimerTask
-* Scheduling Concepts
-* Modern Java APIs
-* Advanced Java Design Patterns
+In this module, you will:
+
+- Work with dates and times  
+- Understand anonymous classes  
+- Use `TimerTask` for scheduling tasks  
+- Apply advanced Java APIs and patterns  
 
 ---
 
-## Module Structure
+## 🎥 Learning Resource
+
+https://youtu.be/xTtL8E4LzTQ  
+
+### ⏱ Watch These Sections:
+
+- Dates & Times → 10:11:42 → 10:20:24  
+- Anonymous Classes → 10:20:24 → 10:25:23  
+- TimerTasks → 10:25:23 → 10:35:00  
+
+---
+
+## 📚 Learning Outcomes Assessed
+
+- Date Handling  
+- Time Handling  
+- Date Formatting  
+- Java Time API  
+- Anonymous Classes  
+- Runnable Interface  
+- TimerTask  
+- Scheduling Concepts  
+- Advanced Java APIs  
+- Basic Design Patterns  
+
+---
+
+## 🛠 Module Structure
 
 This module contains:
 
 ### Coding Practice:
 
-Complete all functions inside:
+Complete all methods inside:
 
-```java id="q4m8vx"
 AdvancedJavaExercises.java
-```
 
 ---
 
-## Your Task
+## ✅ What You Must Do
 
 For this module, you must:
 
-* Work with Java’s date and time systems
-* Format dates professionally
-* Understand anonymous classes
-* Implement `Runnable`
-* Simulate scheduled tasks
-* Use advanced Java APIs
-* Return exact outputs
-* Pass all tests successfully
+- Work with Java date and time APIs  
+- Format dates correctly  
+- Implement anonymous classes  
+- Use `Runnable` properly  
+- Simulate scheduled tasks  
+- Apply modern Java utilities  
+- Return exact expected outputs  
+- Pass all unit tests  
 
 ---
 
-## Your Goal
-
-For each function:
-
-* Use valid Java syntax
-* Use proper advanced Java APIs
-* Follow exact formatting rules
-* Keep logic clean
-* Handle execution correctly
-* Understand object behavior
-* Ensure all unit tests pass
+## 🧠 Core Concepts
 
 ---
 
-## How to Run Your Tests
+### 🔹 Dates & Times
 
-### Run all tests:
+Java provides modern tools for working with dates and time.
 
-```bash id="z7v3pk"
-mvn test
-```
+Common classes:
 
-### Run module tests:
+- LocalDate  
+- LocalTime  
+- LocalDateTime  
+- DateTimeFormatter  
 
-```bash id="m2x8qr"
-mvn test -Dtest=AdvancedJavaExercisesTest
-```
+Used in:
 
----
-
-# 🧠 Core Advanced Java Concepts
-
----
-
-# 🔹 Dates & Times
-
-Java provides modern APIs for date and time management.
+- Logging systems  
+- Scheduling  
+- Reports  
+- Financial systems  
 
 ---
 
-### Common Classes:
+### 🔹 Date Formatting
 
-* `LocalDate`
-* `LocalTime`
-* `LocalDateTime`
-* `DateTimeFormatter`
+Dates must often be converted into readable formats.
 
----
+Example format:
 
-### Why They Matter:
+- dd-MM-yyyy  
 
-Dates and times are essential for:
+Used in:
 
-* Logging
-* Scheduling
-* Reports
-* APIs
-* Authentication
-* Business systems
+- Reports  
+- User interfaces  
+- Booking systems  
 
 ---
 
-### Example:
+### 🔹 Anonymous Classes
 
-```java id="v8m4qp"
-LocalDate.now()
-```
+Anonymous classes allow you to create a class without naming it.
 
----
+Used for one-time behavior.
 
-# 🔹 Date Formatting
+Common use cases:
 
-Raw dates may not always be user-friendly.
-
-Formatting makes them readable.
+- Threads  
+- Event handling  
+- Short tasks  
 
 ---
 
-### Example:
+### 🔹 TimerTask
 
-```java id="t5v9zx"
-dd-MM-yyyy
-```
+TimerTask allows scheduled execution of code.
 
----
+Used in:
 
-### Real-World Use:
-
-* Financial statements
-* Government systems
-* Reports
-* Booking software
+- Background jobs  
+- Notifications  
+- Automation systems  
+- Scheduled tasks  
 
 ---
 
-# 🔹 Anonymous Classes
-
-Anonymous classes allow quick one-time object creation without defining a full class.
+## 🧪 Exercises
 
 ---
 
-### Example:
+## 🧩 Question 1 — Get Current Date
 
-```java id="r3m7qt"
-new Runnable() {
-    public void run() {
-        ...
-    }
-}
-```
+### Method:
+getCurrentDate()
 
 ---
 
-### Why They Matter:
+### Objective:
 
-Useful for:
-
-* Threads
-* Event handling
-* Task execution
-* Temporary implementations
+Retrieve the system’s current date.
 
 ---
 
-# 🔹 TimerTask
+### Requirements:
 
-`TimerTask` allows scheduling future or repeated actions.
-
----
-
-### Real-World Uses:
-
-* Notifications
-* Scheduled reports
-* Background jobs
-* System maintenance
-* Automated monitoring
+- Return current date as a string  
+- Must use Java time API  
+- Output must reflect system date  
 
 ---
 
-# 🧪 Project Structure
+### What is being tested:
 
-```plaintext id="n9v4pk"
-module13/
-├── AdvancedJavaExercises.java
-├── tests/
-│   └── AdvancedJavaExercisesTest.java
-└── README.md
-```
+- LocalDate usage  
+- System time retrieval  
+- API understanding  
 
 ---
 
-# Question 1 - Get Current Date
+## 🧩 Question 2 — Get Current Time
 
-## Function:
-
-```java id="f8m3qx"
-exercise1_getCurrentDate()
-```
+### Method:
+getCurrentTime()
 
 ---
 
-### Detailed Objective:
+### Objective:
 
-Retrieve the system’s current date and return it as a string.
-
----
-
-### Rules:
-
-* Use Java date APIs
-* Return current date
-* Output should reflect system date
+Retrieve the current system time.
 
 ---
 
-### Example Output:
+### Requirements:
 
-| Output       |
-| ------------ |
-| "2026-05-08" |
-
----
-
-### Why This Matters:
-
-Most applications need current date tracking.
-
-Examples:
-
-* Attendance systems
-* Banking systems
-* Reports
-* Scheduling
+- Return current time as a string  
+- Must use Java time API  
 
 ---
 
-### Developer Skill Built:
+### What is being tested:
 
-* LocalDate usage
-* System integration
-* Dynamic runtime data
-
----
-
-# Question 2 - Get Current Time
-
-## Function:
-
-```java id="h4v8zt"
-exercise2_getCurrentTime()
-```
+- LocalTime usage  
+- Time formatting awareness  
+- System time handling  
 
 ---
 
-### Detailed Objective:
+## 🧩 Question 3 — Format Date
 
-Retrieve current system time.
-
----
-
-### Rules:
-
-* Use Java time APIs
-* Return as string
+### Method:
+formatDate()
 
 ---
 
-### Example Output:
+### Objective:
 
-| Output         |
-| -------------- |
-| "14:35:22.123" |
+Format the current date into a readable format.
 
 ---
 
-### Why:
+### Requirements:
 
-Time tracking is critical for:
-
-* Logs
-* Monitoring
-* Event systems
-* Security systems
+- Format must be: dd-MM-yyyy  
+- Use proper Java formatter  
+- Return formatted string  
 
 ---
 
-# Question 3 - Format Date
+### What is being tested:
 
-## Function:
-
-```java id="j7m2qx"
-exercise3_formatDate()
-```
+- DateTimeFormatter usage  
+- Formatting logic  
+- Output precision  
 
 ---
 
-### Detailed Objective:
+## 🧩 Question 4 — Anonymous Runnable
 
-Format the current date into:
-
-```plaintext id="x5v8mr"
-dd-MM-yyyy
-```
+### Method:
+anonymousRunnable()
 
 ---
 
-### Rules:
+### Objective:
 
-* Use `DateTimeFormatter`
-* Return formatted string
-
----
-
-### Example:
-
-| Raw Date   | Output     |
-| ---------- | ---------- |
-| 2026-05-08 | 08-05-2026 |
+Create and execute an anonymous Runnable.
 
 ---
 
-### Real-World Use:
+### Requirements:
 
-Formatting improves readability for users.
-
----
-
-### Developer Skill Built:
-
-* Formatting APIs
-* User-facing design
-* Standardized outputs
+- Use anonymous class implementation  
+- Execute run method  
+- Return string: "Running"  
 
 ---
 
-# Question 4 - Anonymous Runnable
+### What is being tested:
 
-## Function:
-
-```java id="p3v7kt"
-exercise4_anonymousRunnable()
-```
+- Runnable interface  
+- Anonymous class usage  
+- Execution flow understanding  
 
 ---
 
-### Detailed Objective:
+## 🧩 Question 5 — TimerTask Execution
 
-Create an anonymous implementation of `Runnable`, execute it, and return:
-
-```plaintext id="s8m4qp"
-Running
-```
+### Method:
+timerTaskExecution()
 
 ---
 
-### Rules:
+### Objective:
 
-* Use anonymous class
-* Implement `run()`
-* Simulate execution
+Simulate a scheduled task using TimerTask.
 
 ---
 
-### Why This Matters:
+### Requirements:
 
-Runnable concepts are foundational for:
-
-* Threads
-* Async systems
-* Background tasks
-* Java concurrency
+- Create a TimerTask  
+- Execute task logic  
+- Return string: "Task executed"  
 
 ---
 
-### Developer Skill Built:
+### What is being tested:
 
-* Interface implementation
-* Anonymous classes
-* Execution flow
-
----
-
-# Question 5 - TimerTask Execution
-
-## Function:
-
-```java id="w4v9zx"
-exercise5_timerTask()
-```
+- TimerTask concept  
+- Scheduling logic  
+- Task execution flow  
 
 ---
 
-### Detailed Objective:
+## 💡 Key Developer Tips
 
-Simulate a scheduled task using `TimerTask`.
-
----
-
-### Rules:
-
-* Create task
-* Execute task logic
-* Return:
-
-```plaintext id="k8m3qt"
-Task executed
-```
+- Use LocalDate and LocalTime correctly  
+- Prefer modern Java time API  
+- Anonymous classes are for quick logic only  
+- TimerTask simulates scheduled jobs  
+- Keep implementations clean and minimal  
+- Focus on API usage, not complexity  
+- Understand when to use abstraction  
+- Think in terms of real-world systems  
 
 ---
 
-### Why:
+## 🚀 Goal of This Module
 
-Scheduling systems power:
+By the end of this module, you should:
 
-* Cron jobs
-* Alerts
-* Monitoring
-* Automation
-* Notifications
-
----
-
-### Developer Skill Built:
-
-* Scheduling concepts
-* Task abstraction
-* Java utility classes
+- Work confidently with Java time APIs  
+- Format and manipulate dates  
+- Understand anonymous classes  
+- Implement Runnable logic  
+- Simulate scheduled execution  
+- Use advanced Java features correctly  
+- Build more professional-level code  
 
 ---
 
-# 💡 Key Developer Tips
+## 🏆 Final Mindset
 
-* Prefer `LocalDate` over old `Date`
-* Use `DateTimeFormatter`
-* Keep anonymous classes simple
-* Understand interfaces deeply
-* TimerTasks simulate automation
-* Write reusable patterns
-* Think beyond beginner syntax
-* Learn enterprise-style Java
+Advanced Java is not about writing more code.
 
----
+It is about using the **right tools for the right problem**.
 
-# 🔹 Professional Mindset
-
-Advanced Java concepts separate beginner developers from professional engineers.
-
----
-
-### Beginner:
-
-Writes direct logic.
-
-### Professional:
-
-Uses:
-
-* APIs
-* Patterns
-* Scheduling
-* Reusable abstractions
-
----
-
-# 🚀 End Goal
-
-By completing this module, you should:
-
-* Handle modern Java date systems
-* Format data professionally
-* Use anonymous classes
-* Understand Runnable deeply
-* Work with TimerTask concepts
-* Build more advanced Java systems
-* Strengthen enterprise readiness
-* Think like an experienced Java developer
-
----
-
-# 🏆 Success Mindset
-
-Mastering advanced Java concepts prepares you for:
-
-* Enterprise backend development
-* Automation systems
-* Scheduling platforms
-* API services
-* Professional software engineering
-* Technical interviews
-
-This module marks your transition from Java fundamentals into practical advanced development.
+This module helps you move from basic programming into real-world software engineering thinking.
